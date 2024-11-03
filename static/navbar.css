@@ -1,0 +1,23 @@
+:root {
+    --navbar-title: #ffffff;
+    --navbar-bg: #000000;
+    --bg-color: #000000;
+    --page1-bg: #fafafa;
+    --page1-text: #000000;
+    --border-color: #333333;
+    --text-color: #ffffff;
+    --link-hover: #bbbbbb;
+    --cta-bg: #292929;
+    --cta-hover-bg: #333333;
+    --cta-color: #ffffff;
+    --cta-border-radius: 10px;
+    --footer-bg: #fafafa;
+    --footer-color: #000000;
+    --hero-h1-size: 3rem;
+    --hero-p-size: 1.5rem;
+    --about-h2-size: 2.5rem;
+    --about-p-size: 1.25rem;
+    --instructions-h2-size: 2.5rem;
+    --instructions-p-size: 1.25rem;
+}
+

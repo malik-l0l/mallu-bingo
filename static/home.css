@@ -1,0 +1,287 @@
+:root {
+    --navbar-title: #ffffff;
+    --navbar-bg: #000000;
+    --bg-color: #000000;
+    --page1-bg: #fafafa;
+    --page1-text: #000000;
+    --border-color: #333333;
+    --text-color: #ffffff;
+    --link-hover: #bbbbbb;
+    --cta-bg: #292929;
+    --cta-hover-bg: #333333;
+    --cta-color: #ffffff;
+    --cta-border-radius: 10px;
+    --footer-bg: #fafafa;
+    --footer-color: #000000;
+    --hero-h1-size: 3rem;
+    --hero-p-size: 1.5rem;
+    --about-h2-size: 2.5rem;
+    --about-p-size: 1.25rem;
+    --instructions-h2-size: 2.5rem;
+    --instructions-p-size: 1.25rem;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-title);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover);
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: var(--page1-bg);
+    color: var(--page1-text);
+    position: relative;
+    min-height: 100vh;
+    margin-top: 4rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero h1 {
+    font-size: var(--hero-h1-size);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero p {
+    font-size: var(--hero-p-size);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--cta-color);
+    background-color: var(--cta-bg);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: var(--cta-border-radius);
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-hover-bg);
+    color: var(--cta-color);
+}
+
+.about-section {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--page1-bg);
+    text-align: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--page1-text);
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.about-section h2 {
+    font-size: var(--about-h2-size);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in;
+}
+
+.about-section p {
+    font-size: var(--about-p-size);
+    font-weight: 400;
+    animation: fadeIn 2s ease-in;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    color: var(--page1-text);
+    text-decoration: none;
+    font-size: 1.25rem;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.social-link:hover {
+    color: #555555;
+    border-color: #555555;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.875rem;
+    }
+
+    .about-section {
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+.instructions-section {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--bg-color);
+    text-align: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.instructions-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.instructions-section h2 {
+    font-size: var(--instructions-h2-size);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in;
+}
+
+.instructions-section p {
+    font-size: var(--instructions-p-size);
+    font-weight: 400;
+    text-align: left;
+    animation: fadeIn 2s ease-in;
+}
+
+.instructions-section ul {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    text-align: left;
+    animation: fadeIn 2s ease-in;
+}
+
+.instructions-section ul li {
+    margin-bottom: 1rem;
+}
+
+.instructions-section ul li p {
+    margin-bottom: 0.5rem;
+}
+
+.instructions-section pre {
+    background: var(--cta-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    
+}
+
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: var(--footer-color);
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--footer-bg);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

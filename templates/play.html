@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='play.css') }}"> -->
+<style>
+:root {
+    --navbar-title: #ffffff;
+    --navbar-bg: #000000;
+    --bg-color: #000000;
+    --page1-bg: #fafafa;
+    --page1-text: #000000;
+    --border-color: #333333;
+    --text-color: #ffffff;
+    --link-hover: #bbbbbb;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--navbar-bg);
+    transition: background-color 0.3s;
+    padding: 1rem 0; /* Ensure padding on top and bottom */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; /* Add padding to the left and right */
+    max-width: 1200px; /* Center the navbar content within a max width */
+    margin: 0 auto; /* Center the container */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--navbar-title);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px; /* Adjusted to account for the navbar height */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    flex: 1; /* Ensure sections take up available space */
+    max-width: 500px; /* Adjust maximum width */
+}
+
+.bingo-header {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+
+.bingo-label {
+    font-size: 24px;
+    margin-bottom: 10px;
+    min-height: 36px; /* Ensures space is reserved even when not visible */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 100%; /* Make the card width responsive */
+    max-width: 300px;
+    background-color: #333;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.bingo-card button {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #fff;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bingo-card button a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bingo-card button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.bingo-status {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.bingo-status h3 {
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bingo-card {
+        width: 100%;
+        max-width: 400px; /* Increase max width for larger boards on mobile */
+        margin-bottom: 20px;
+    }
+
+    .bingo-card button {
+        height: 70px; /* Increase button height */
+        font-size: 22px; /* Increase font size */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin-top: 300px; /* Ensure enough space for header */
+    }
+    
+    .bingo-card {
+        max-width: 350px; /* Further increase max width */
+    }
+
+    .bingo-card button {
+        height: 60px; /* Adjust button height */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .bingo-header {
+        font-size: 28px;
+    }
+
+    .bingo-label {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        margin-top: 120px; /* Ensure enough space for header */
+    }
+
+    .section.player-section {  /* Ensure enough space for header-my soln */
+        margin-top: 70px;
+    }
+    
+    .bingo-card {
+        max-width: 300px; /* Adjust max width */
+    }
+
+    .bingo-card button {
+        height: 50px; /* Adjust button height */
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .bingo-header {
+        font-size: 24px;
+    }
+
+    .bingo-label {
+        font-size: 18px;
+    }
+}
+
+.logo a{
+    text-decoration: none;
+    color: inherit;
+}
+
+</style>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo"><a href="/">Indian Bingo</a></div>
+        <ul class="nav-links">
+            <li><a href="/#instructions">Instructions</a></li>
+            <li><a href="/#about">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section player-section">
+        <div class="bingo-header">Player</div>
+
+        <div class="bingo-label">
+            {% if count_p %}
+                {% for i in range(count_p) %}
+                    <span>{{ "BINGO"[i] }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="bingo-card">
+            {% for i in range(5) %}
+                {% for j in range(5) %}
+                    {% if player_b[i][j] == '█' %}
+                        <button disabled>{{ player_b[i][j] }}</button>
+                    {% else %}
+                        <button><a href='/mark/{{ player_b[i][j] }}'>{{ player_b[i][j] }}</a></button>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+    {% if computer_b %}
+    <div class="section computer-section">
+        <div class="bingo-header">Computer</div>
+
+        <div class="bingo-label">
+            {% if count_c %}
+                {% for i in range(count_c) %}
+                    <span>{{ "BINGO"[i] }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="bingo-card">
+            {% for i in range(5) %}
+                {% for j in range(5) %}
+                    <button disabled>{{ computer_b[i][j] }}</button>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+
+<div class="bingo-status">
+    {% if player_n %}
+        <h3>Player: {{ player_n }}</h3>
+        <h3>Computer: {{ computer_n }}</h3>
+    {% endif %}
+</div>
+
+
+{% endblock %}
