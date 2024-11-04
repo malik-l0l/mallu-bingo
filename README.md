@@ -60,8 +60,8 @@ Are you ready for a true challenge? In Hard Mode, the computer is a formidable o
 
 | Versions       | Description                                          | Access Link                        |
 |----------------|------------------------------------------------------|------------------------------------|
-| Script Version  | Can be played through terminal just by executing the project. | [Click here to access script](#)   |
-| Web Version     | Play the game through a website.                     | [Click here](#)                    |
+| Script Version  | Can be played through terminal just by executing the project. | [Click here to access code]([#](https://github.com/malik-l0l/mallu-bingo/tree/main/%23script-only))   |
+| Web Version     | Play the game through a website.                     | [Click here to access code]([#](https://github.com/malik-l0l/mallu-bingo)s)                    |
 
 
 ### Technologies/Components Used
@@ -73,14 +73,65 @@ For Software:
 
 
 # Run - script version
-[commands]
+1. Clone the repo
+```
+git clone https://github.com/malik-l0l/mallu-bingo.git
+```
+2. Navigate into the script-only folder in project directory
+```
+cd mallu-bingo
+```
+3. Run the Python script
+```
+python mallu-bingo.py
 
-### Project Documentation
-For Software:
+```
+
+
+# Run - web version
+#### Installation
+
+
+1. clone the repository
+```
+git clone https://github.com/malik-l0l/mallu-bingo.git
+```
+
+2. navigate to the directory
+```
+cd bingo-game
+```
+
+3. (optional) create a virtual environment
+```
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scriptsctivate` or .\.venv\Scripts/activate
+```
+4. install requirements if needed
+```
+pip install -r requirements.txt
+```
+5. Run
+
+```
+python app.py
+```
+
+
+
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+
+1. The Global Variables : 
+![Screenshot (164)](https://github.com/user-attachments/assets/8f6ffcb3-c4c6-473d-94fa-c0888d62536c)
+Customize your game experience by adjusting the following settings within the code:
+
+| Setting               | Description                                                                                                                                               | Example Values       |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| `REMOVED_NUMBER`      | Defines the symbol used to mark numbers that have been selected. You can choose any symbol to represent marked numbers on the board.                        | `"█"`, `"֍"`, `"•"`, `"Ø"` |
+| `SHOW_COMPUTER_BOARD` | Set this to `True` to display the computer's board during the game, allowing players to observe its strategy. If `False`, the computer’s board remains hidden. | `True`, `False`      |
+| `CHALLENGE`           | Determines the difficulty level of the game, influencing the computer's strategy: <br> - **`easy`**: The computer plays weakly, making it easy for the player to win. <br> - **`medium`**: The computer uses a balanced strategy that mimics human decision-making. <br> - **`hard`**: The computer plays optimally, making it nearly impossible for the player to win. | `"easy"`, `"medium"`, `"hard"` |
+
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
@@ -88,41 +139,15 @@ For Software:
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
+https://github.com/user-attachments/assets/abe3047d-e904-45f1-a7e7-5a9ad5457a2b
+playing the game in script version.
 
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+
 ## Details
 
 | Team | Name | College |
