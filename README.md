@@ -1,15 +1,20 @@
 
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# Mallu-Bingo
+# 🎲 Mallu-Bingo
+You can start playing right away with one of these options:
 
-## Description
-Sometimes, classes can feel a bit dull, and that’s when I turn to my favorite paper games! One game I absolutely love is "Bingo." It's a simple yet strategic paper game that brings a spark of excitement to the day. Whether I'm playing with friends or competing to see who can get to that magical "Bingo!" first, it always adds a fun twist to the usual routine.
+- Play Online: [mallu-bingo](https://mallu-bingo.vercel.app)
+- Play in Terminal: Follow the instructions below to get started with the script version
+---
 
-In the old days, every kid's notebook had a special space dedicated to playing Bingo, making it a beloved pastime that brightened our school days. Those moments of friendly competition and laughter created memories that still make me smile! This game is especially popular among the "Useless Backbench Team," who always find a way to turn the most boring classes into a lively competition.
+## 📝 Description
+Ever feel like classes drag on forever? That’s when my favorite paper game, **Bingo**, comes to the rescue! This classic game of strategy and chance was a staple in every kid's notebook, bringing life to even the dullest school days. Whether it's competing with friends or racing to that magical “Bingo!” moment, it’s a surefire way to add fun to any routine.
 
+Back in the day, Bingo was a beloved pastime of the “Useless Backbench Team,” always ready to turn any boring class into a lively competition. Now, you can relive those memories with *Mallu-Bingo*, a game that brings back the thrill of friendly competition!
 
-## Game Instructions
+---
+## 💬 Game Instructions
 
 Bingo is a 2 player game which has so many versions. The instructions for this version are given below:
 
@@ -36,19 +41,19 @@ Bingo is a 2 player game which has so many versions. The instructions for this v
 
 6. `"Whoever gets 5 points AKA 'B I N G O' first WINS!"`
 
-## Game Overview
+## 🗺️ Game Overview
 
 In this 2-player game, players will take turns calling out numbers and marking them on their boards. The objective? Be the first to mark five numbers in a row, column, or diagonal to achieve 'B I N G O'! The fun doesn’t stop there; with our unique game modes, you can choose how challenging you want your experience to be.
 
-## Game Modes
+### 🌟 Game Modes
 
-### 🎮 Easy Mode
+### 🟢 Easy Mode
 In Easy Mode, you can relax and enjoy the game without breaking a sweat! `The computer is completely Useless here`, making it easy for players to win. Perfect for beginners or anyone looking for a casual game experience!
 
-### 🎮 Medium Mode
+### 🟡 Medium Mode
 Step it up with Medium Mode! Here, the competition heats up as the computer employs a clever algorithm designed to mimic human strategies. It will analyze the board and make decisions based on the data, providing a balanced challenge. `Here both Player or Computer can be Useless`, both players still have an equal chance of winning, so bring your best game face!
 
-### 🎮 Hard Mode
+### 🔴 Hard Mode
 Are you ready for a true challenge? In Hard Mode, the computer is a formidable opponent that will always win. No matter how skilled you think you are, `prepare to feel utterly Useless as you face this relentless competitor!` This mode is perfect for those who want to push their limits and experience the thrill of near-impossible odds. Only the bravest players dare to take on this mode!
 
 
@@ -56,23 +61,23 @@ Are you ready for a true challenge? In Hard Mode, the computer is a formidable o
 
 
 
-## Technical Details
+## 🛠️ Technical Details
 
 | Versions       | Description                                          | Access Link                        |
 |----------------|------------------------------------------------------|------------------------------------|
-| Script Version  | Can be played through terminal just by executing the project. | [Click here to access code]([#](https://github.com/malik-l0l/mallu-bingo/tree/main/%23script-only))   |
-| Web Version     | Play the game through a website.                     | [Click here to access code]([#](https://github.com/malik-l0l/mallu-bingo)s)                    |
+| Script Version  | Play the game in the terminal | [Click here to access code](https://github.com/malik-l0l/mallu-bingo/tree/main/%23script-only)   |
+| Web Version     | Play the game on a web interface.                     | [Click here to access code](https://github.com/malik-l0l/mallu-bingo)                   |
 
 
-### Technologies/Components Used
+
+## 🧩 Technologies Used
 For Software:
-- For Scripts we used Python only wth random library
-- For web version we used Python Flask
+
+- Script Version: Python with the random library.
+- Web Version: Python (Flask), hosted on Vercel.
 
 
-
-
-# Run - script version
+### 🏃 Run - script version
 1. Clone the repo
 ```
 git clone https://github.com/malik-l0l/mallu-bingo.git
@@ -88,7 +93,7 @@ python mallu-bingo.py
 ```
 
 
-# Run - web version
+### 🏃 Run - web version
 #### Installation
 
 
@@ -120,9 +125,9 @@ python app.py
 
 
 
-# Screenshots (Add at least 3)
+## 📸 Screenshots 
 
-1. The Global Variables : 
+1. Script Version Settings :  
 ![Screenshot (164)](https://github.com/user-attachments/assets/8f6ffcb3-c4c6-473d-94fa-c0888d62536c)
 Customize your game experience by adjusting the following settings within the code:
 
@@ -132,26 +137,45 @@ Customize your game experience by adjusting the following settings within the co
 | `SHOW_COMPUTER_BOARD` | Set this to `True` to display the computer's board during the game, allowing players to observe its strategy. If `False`, the computer’s board remains hidden. | `True`, `False`      |
 | `CHALLENGE`           | Determines the difficulty level of the game, influencing the computer's strategy: <br> - **`easy`**: The computer plays weakly, making it easy for the player to win. <br> - **`medium`**: The computer uses a balanced strategy that mimics human decision-making. <br> - **`hard`**: The computer plays optimally, making it nearly impossible for the player to win. | `"easy"`, `"medium"`, `"hard"` |
 
+2. Web Version Landing Page
+![Screenshot (165)](https://github.com/user-attachments/assets/1ccc4243-ef30-4cc7-9c17-c1bbf58f9e4d)
+The landing page provides instructions and an option to show the computer’s board during gameplay.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+3. Bingo board during game-play
+![Screenshot (168)](https://github.com/user-attachments/assets/ecbeac9d-da81-4923-ba7a-1a57df3faaf4)
+Experience the thrill of marking numbers and achieving BINGO.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+4. Victory Screen
+![Screenshot (167)](https://github.com/user-attachments/assets/8d458dec-3643-4dbf-8913-9209b979ddfd)
+The win condition is to get all "B I N G O" letters,so achieve victory by getting all letters in B I N G O before your opponent! Here the player won because he got all BINGO letters before the computer.
 
+## 🎥 Video
 
+1. Game play walk through [script version]
 
-### Project Demo
-# Video
-
+   
 https://github.com/user-attachments/assets/abe3047d-e904-45f1-a7e7-5a9ad5457a2b
-playing the game in script version.
 
 
-## Details
+playing the game in script version in terminal.
+
+
+2.Game play walk through [web version]
+
+
+https://github.com/user-attachments/assets/58b5158d-f64f-4ce3-b52f-e888541606bb
+
+
+playing the game in web version in browser.
+
+
+
+
+
+## 👥 Me ??...
 
 | Team | Name | College |
-|---|---|---|
+|------|------|---------|
 | Individual | Saleem Malik | GEC Kozhikode |
 ---
 Made with ❤️ at TinkerHub Useless Projects 
