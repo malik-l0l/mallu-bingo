@@ -6,7 +6,7 @@ You can start playing right away with one of these options:
 
 - Play Online: [mallu-bingo](https://mallu-bingo.vercel.app)
 - Play in Terminal: Follow the instructions below to get started with the script version
-- useless!! How? [check it out.](#why-call-it-useless)
+- useless!! How? [check it out.](#%EF%B8%8F-why-call-it-useless)
 
 ---
 
@@ -59,7 +59,7 @@ Step it up with Medium Mode! Here, the competition heats up as the computer empl
 Are you ready for a true challenge? In Hard Mode, the computer is a formidable opponent that will always win. No matter how skilled you think you are, `prepare to feel utterly Useless as you face this relentless competitor!` This mode is perfect for those who want to push their limits and experience the thrill of near-impossible odds. Only the bravest players dare to take on this mode!
 
 
-## Why Call It Useless?
+## 🤦🏻‍♂️ Why Call It Useless?
 
 You might be wondering, “Why call it useless?” Well, in **easy mode**, the computer lives up to that name. It’s completely random—just marking numbers on the bingo board without any strategy.
 
@@ -106,20 +106,6 @@ Instead, I found a much simpler way to ensure the computer is *always* unbeatabl
 
 
 
-   
-```prompt i used to obtain an optimal grid :  You are given 5 sticks, each of length 5, and a 5x5 grid where each cell has a length of 1. The sticks can only be placed diagonally, in a row, or in a column. Your task is to determine the optimal positions for all 5 sticks, with the following conditions:`
-
-Grid Layout: The 5x5 grid has two diagonals. A stick placed diagonally can occupy either diagonal (from one corner to the opposite corner). It is possible to place two sticks along both diagonals, if needed.
-
-Overlapping: Sticks can overlap or share cells. The goal is to maximize the overlap and place the sticks using the minimum number of cells.
-
-Stick Orientation: A stick can be placed along any full row, full column, or along a diagonal.
-
-Objective: Minimize the total number of cells used to place all 5 sticks.
-
-Empty Cells: Some cells in the grid may remain empty.```
-
-What is the optimal arrangement to place all 5 sticks with the minimum number of cells used?
 
 The cells marked with "█" are the computer's secret weapon. These 16 spots are its priority.
 
