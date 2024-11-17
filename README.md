@@ -6,6 +6,8 @@ You can start playing right away with one of these options:
 
 - Play Online: [mallu-bingo](https://mallu-bingo.vercel.app)
 - Play in Terminal: Follow the instructions below to get started with the script version
+- useless!! How? [check it out.](#why-call-it-useless)
+
 ---
 
 ## 📝 Description
@@ -57,24 +59,92 @@ Step it up with Medium Mode! Here, the competition heats up as the computer empl
 Are you ready for a true challenge? In Hard Mode, the computer is a formidable opponent that will always win. No matter how skilled you think you are, `prepare to feel utterly Useless as you face this relentless competitor!` This mode is perfect for those who want to push their limits and experience the thrill of near-impossible odds. Only the bravest players dare to take on this mode!
 
 
+## Why Call It Useless?
+
+You might be wondering, “Why call it useless?” Well, in **easy mode**, the computer lives up to that name. It’s completely random—just marking numbers on the bingo board without any strategy.
+
+What’s the use of playing against a random number generator, anyway? 
+
+Now, in **medium mode**, it’s a fair game. Either you or the computer can win, as it’s a mix of luck and strategy.
+
+But here’s the real twist...
+
+**Hard mode** is where things get interesting—and frustrating! My goal? To make you feel completely helpless AKA `useless`, like `no matter how hard you try, you just *can’t* win. The computer wins every single time. Yep, always.`
+
+To pull this off, I considered training a super-advanced neural network using years of data... Just kidding! 😂 I didn’t actually go that far.
+
+Instead, I found a much simpler way to ensure the computer is *always* unbeatable—by using a clever game rule to its advantage.
+
+ Here’s how:
+
+1. When the game starts, you create your board with numbers from 1 to 25, while the computer starts with a completely empty board.
+
+2. As the game progresses, the computer cleverly fills its board in a specific pattern:
+
+   ```plaintext
+   grid = [
+       ["█", "█", "█", "█", "█"],
+       [" ", "█", " ", "█", " "],
+       [" ", "█", "█", "█", " "],
+       [" ", "█", " ", "█", " "],
+       ["█", "█", " ", "█", "█"],
+   ]
+   prompt i used to obtain an optimal grid :
+   
+     You are given 5 sticks, each of length 5, and a 5x5 grid where each cell has a length of 1.
+     The sticks can only be placed diagonally, in a row, or in a column.
+     Your task is to determine the optimal positions for all 5 sticks, with the following conditions:
+   
+   Grid Layout: The 5x5 grid has two diagonals. A stick placed diagonally can occupy either diagonal (from one corner to the opposite corner).
+                It is possible to place two sticks along both diagonals, if needed.
+   Overlapping: Sticks can overlap or share cells. The goal is to maximize the overlap and place the sticks using the minimum number of cells.
+   Stick Orientation: A stick can be placed along any full row, full column, or along a diagonal.
+   Objective: Minimize the total number of cells used to place all 5 sticks.
+   Empty Cells: Some cells in the grid may remain empty.
+   
+   What is the optimal arrangement to place all 5 sticks with the minimum number of cells used?
 
 
 
+   
+```prompt i used to obtain an optimal grid :  You are given 5 sticks, each of length 5, and a 5x5 grid where each cell has a length of 1. The sticks can only be placed diagonally, in a row, or in a column. Your task is to determine the optimal positions for all 5 sticks, with the following conditions:`
+
+Grid Layout: The 5x5 grid has two diagonals. A stick placed diagonally can occupy either diagonal (from one corner to the opposite corner). It is possible to place two sticks along both diagonals, if needed.
+
+Overlapping: Sticks can overlap or share cells. The goal is to maximize the overlap and place the sticks using the minimum number of cells.
+
+Stick Orientation: A stick can be placed along any full row, full column, or along a diagonal.
+
+Objective: Minimize the total number of cells used to place all 5 sticks.
+
+Empty Cells: Some cells in the grid may remain empty.```
+
+What is the optimal arrangement to place all 5 sticks with the minimum number of cells used?
+
+The cells marked with "█" are the computer's secret weapon. These 16 spots are its priority.
+
+Here’s how it works: You go first, marking a number by "█". Then the computer responds by marking another number "█", and this back-and-forth continues. Each turn is what we’ll call ONE GAME MOVE.
+
+By the 8th move, the computer will have filled all its "█" spots. This guarantees it a perfect winning combination—BINGO!
+
+3. After that, the computer fills the remaining empty spaces with numbers that neither of you called. This clever trick makes it look like the computer's win was totally fair. But you and I know the truth: the computer was always destined to win!
+
+`you can call this cheating but i call this advaned-strategy`
 
 ## 🛠️ Technical Details
 
-| Versions       | Description                                          | Access Link                        |
-|----------------|------------------------------------------------------|------------------------------------|
-| Script Version  | Play the game in the terminal | [Click here to access code](https://github.com/malik-l0l/mallu-bingo/tree/main/%23script-only)   |
-| Web Version     | Play the game on a web interface.                     | [Click here to access code](https://github.com/malik-l0l/mallu-bingo)                   |
+| Versions       | Description                                          | Access Link                        | Hard mode |
+|----------------|------------------------------------------------------|------------------------------------|--------------|
+| Script Version  | Play the game in the terminal | [Click here to access code](https://github.com/malik-l0l/mallu-bingo/tree/main/%23script-only)   | yes |
+| Web Version     | Play the game on a web interface.                     | [Click here to access code](https://github.com/malik-l0l/mallu-bingo)      |no |             |
 
 
 
-## 🧩 Technologies Used
-For Software:
+## 🧩 Technologies Used  
 
-- Script Version: Python with the random library.
-- Web Version: Python (Flask), hosted on Vercel.
+- **Script Version**: Python with the `random` library.  
+- **Web Version**: Python (Flask), hosted on Vercel.  
+- **AI Used**: ChatGPT-4, Claude 3.5, LLaMA 3.1 (70B), and Google AI Studio.  
 
 
 ### 🏃 Run - script version
